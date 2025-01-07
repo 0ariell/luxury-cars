@@ -28,7 +28,7 @@
 
 /* Navbar */
 .navbar {
-    background-image: url('/freecodercamp/img/bg/bg-nav.png');
+    background-image: url('img/bg/bg-nav.png');
     background-size: cover;
     background-position: center;
 }
