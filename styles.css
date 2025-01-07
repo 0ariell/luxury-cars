@@ -154,7 +154,7 @@
 .benefit-item {
     background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgba(61, 10, 81, 0.834) 50%, rgba(45, 0, 96, 0.834) 100%);
     border-radius: 10px;
-    border: 1px solid rgb(140, 0, 255);
+    border: 1px solid rgb(61, 0, 110);
     padding: 0 !important; 
     margin: 0;
 }
