@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,41 +10,39 @@
     --main-purple: rgba(146, 22, 255, 0.719);
     --black: #000;
     --whitesmoke: #f5f5f5;
+    --dark-bg: #06000a;
+    --btn-gradient: linear-gradient(to right, rgb(140, 30, 230) 0%, rgb(180, 28, 241) 50%, rgb(121, 4, 254) 100%);
+    --btn-hover-gradient: linear-gradient(to right, rgba(140, 30, 230, 0.864) 0%, rgba(180, 28, 241, 0.864) 50%, rgba(121, 4, 254, 0.864) 100%);
 }
 
-/* MAIN */
-
-
+/* Body */
 .body {
-    background-color: #06000a;
+    background-color: var(--dark-bg);
     color: var(--whitesmoke);
 }
 
-
+/* Logo */
 .img-logo {
     width: 100px;
 }
 
-/* Estilos NAV */
-
+/* Navbar */
 .navbar {
-    background-image: url('/freecodercamp/img/bg/bg-nav.png'); /* Cambia la ruta por tu imagen */
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center center; /* Centra la imagen */
+    background-image: url('/freecodercamp/img/bg/bg-nav.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .navbar.navbar-light {
     background-color: #1c1027 !important;
     padding: 1rem !important;
     border-bottom: 1px solid;
-    border-image: linear-gradient(to right, rgb(140, 30, 230) 0%, rgb(180, 28, 241) 50%, rgb(121, 4, 254) 100%) 1;
+    border-image: var(--btn-gradient) 1;
 }
-
 
 .nav-link {
     color: var(--whitesmoke) !important;
     font-size: 1rem !important;
-    font-family: 'Nunito sans';
     font-weight: 450 !important;
 }
 
@@ -57,7 +56,7 @@
 }
 
 .navbar-toggler:focus {
-    box-shadow: none !important;  /* Elimina la sombra cuando está cerrado */
+    box-shadow: none !important;
 }
 
 .navbar-nav {
@@ -68,18 +67,17 @@
 .nav-item {
     padding: 3px 0;
     border-bottom: 1px solid;
-    border-image: linear-gradient(to right, rgb(140, 30, 230) 0%, rgb(180, 28, 241) 50%, rgb(121, 4, 254) 100%) 1;
+    border-image: var(--btn-gradient) 1;
 }
 
-
 #button-login-nav {
-    border-bottom: 0px solid #9a6de3c4;
+    border-bottom: 0;
 }
 
 #custom-btn-main {
     width: 100%;
     border: none;
-    background: linear-gradient(to right, rgb(140, 30, 230) 0%, rgb(180, 28, 241) 50%, rgb(121, 4, 254) 100%);
+    background: var(--btn-gradient);
     color: #fff; 
     font-size: 1.10rem; 
     border-radius: 10px;
@@ -94,22 +92,20 @@
 }
 
 /* Main section */
-
 .hero {
     margin-top: 10px;
     font-weight: 200;
     text-align: center;
     padding: .5rem;
-    color: rgb(255, 255, 255);
+    color: #fff;
+}
+
+.hero-title, .hero-p {
+    text-shadow: 0px 0px 4px var(--main-purple);
 }
 
 .hero-title {
-    text-shadow: 0px 0px 4px var(--main-purple);
     font-weight: 800;
-}
-
-.hero-p {
-    text-shadow: 0px 0px 4px var(--main-purple);
 }
 
 .custom-btn.hero-btn {
@@ -123,10 +119,9 @@
 }
 
 /* Slider */ 
-
 #slider-container {
     border-radius: 10px;
-    padding: 0px 18px;
+    padding: 0 18px;
 }
 
 .carousel-inner .carousel-item img {
@@ -136,18 +131,16 @@
 }
 
 .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
-/* Asegúrate de que el contenedor también tenga el border-radius */
 .carousel-item {
-    border-radius: 10px;  /* Aquí también le damos border-radius al contenedor */
-    overflow: hidden;     /* Esto es importante para que las imágenes no se desborden */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Cajas de exclusividad */
-
+/* Benefit Boxes */
 .article-container {
     margin-top: 2rem;
     padding: 0 1rem !important;
@@ -159,9 +152,9 @@
 }
 
 .benefit-item {
-    background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgb(61, 10, 81, 0.834) 50%, rgb(45, 0, 96, 0.834) 100%);
+    background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgba(61, 10, 81, 0.834) 50%, rgba(45, 0, 96, 0.834) 100%);
     border-radius: 10px;
-    border: rgb(140, 0, 255) solid 1px;
+    border: 1px solid rgb(140, 0, 255);
     padding: 0 !important; 
     margin: 0;
 }
@@ -169,7 +162,7 @@
 .benefit-title {
     font-weight: 900;
     text-align: left;
-    padding:  20px 20px 5px 20px;
+    padding: 20px;
     margin: 0;
 }
 
@@ -179,17 +172,14 @@
     margin: 0;
 }
 
-
-/* FORMULARIO */
-
+/* Form Styles */
 #body-form {
     background-image: url(/freecodercamp/img/bg/bg-nav.png);
 }
 
 body, label, header, fieldset  {
-    color: whitesmoke;
+    color: var(--whitesmoke);
 }
-
 
 header {
     margin: 1.5rem;
@@ -207,7 +197,7 @@ header {
 
 #description {
     font-weight: lighter;
-    font-style:italic;
+    font-style: italic;
 }
 
 #title {
@@ -221,7 +211,6 @@ form {
     border-radius: 25px;
     padding: 2rem;
 }
-
 
 div.form-check {
     margin-top: 10px;
@@ -243,7 +232,7 @@ div.form-check {
 
 .form-control:focus#name:focus, #email:focus, #number:focus{
     box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
-    border:none;
+    border: none;
 }
 
 input, select, textarea {
@@ -256,37 +245,22 @@ input, select, textarea {
 
 textarea:focus {
     box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
-    border:none;
+    border: none;
 }
 
-input[type="checkbox"]:checked {
-    background-color: #5210d5e9; /* Cambia el color de fondo */
-    border:none
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    background-color: #5210d5e9;
+    border: none;
 }
 
-input[type="checkbox"]:hover {
-    background-color: #7a37ffe9; /* Cambia el color de fondo */
-    border:none
+input[type="checkbox"]:hover, input[type="radio"]:hover {
+    background-color: #7a37ffe9;
+    border: none;
 }
 
-input[type="checkbox"]:focus {
+input[type="checkbox"]:focus, input[type="radio"]:focus {
     box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
-    border:none;
-}
-
-input[type="radio"]:checked {
-    background-color: #5210d5e9; /* Cambia el color de fondo */
-    border:none;
-}
-
-input[type="radio"]:hover {
-    background-color: #7a37ffe9; /* Cambia el color de fondo */
-    border:none;
-}
-
-input[type="radio"]:focus {
-    box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
-    border:none;
+    border: none;
 }
 
 #dropdown {
@@ -303,7 +277,6 @@ input[type="radio"]:focus {
 select option {
     color: #151515;
 }
-
 
 label.label-enter {
     font-size: 0.95rem;
@@ -344,8 +317,8 @@ fieldset {
 
 button.custom-btn {
     border: none;
-    margin-top: 1rem ;
-    background: linear-gradient(to right, rgb(140, 30, 230) 0%, rgb(180, 28, 241) 50%, rgb(121, 4, 254) 100%);
+    margin-top: 1rem;
+    background: var(--btn-gradient);
     color: #fff; 
     font-size: 1.10rem; 
     padding: .60rem;
@@ -358,27 +331,27 @@ button.custom-btn {
 
 button.custom-btn:hover {
     transform: scale(1.06);
-    border: none;
-    background: linear-gradient(to right, rgba(140, 30, 230, 0.864) 0%, rgb(180, 28, 241, 0.864) 50%, rgb(121, 4, 254, 0.864) 100%);
+    background: var(--btn-hover-gradient);
     color: #fff;
     box-shadow: 0 0 7px 0.23rem rgba(163, 94, 206, 0.166);
     transition: all 0.4s ease;
 }
 
-/* estilos bstp js */
-
+/* Bootstrap JS styles */
 .error-message {
+    /* Add any specific styles for error messages */
 }
 
+/* Media Queries */
 @media (min-width: 768px) {
     form {
-        max-width: 78%; /* El formulario ocupará un 80% del ancho en pantallas grandes */
-        margin: 0 auto; /* Centramos el formulario */
+        max-width: 78%;
+        margin: 0 auto;
     }
 }
 
 @media (min-width: 992px) {
     form {
-        max-width: 45%; /* En pantallas más grandes, limitamos aún más el tamaño */
+        max-width: 45%;
     }
 }
