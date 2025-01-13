@@ -173,7 +173,19 @@ body {
     margin: 0;
 }
 
-+
+/* About Us */
+
+
+#descriptionAboutUs {
+    text-align: center;
+    padding: 0 20px;
+    font-style: italic;
+}
+
+/* gallery */
+
+.container {}
+
 /* Footer styles */
 
 .footer-home {}
@@ -185,6 +197,7 @@ div.custom-footer-bg {
     background-position: center;
     background-image: url(../img/bg/bg-nav.png);
 }
+
 
 
 /* Form Styles */
