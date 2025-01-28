@@ -1,6 +1,6 @@
 @import '_variables';
 @import '_listas';
-@import 'mixin';
+@import '_mixin';
 
 /* Global Styles */
 * {
@@ -200,18 +200,28 @@ main {
 
 /* gallery */
 
-.header-gallery {
+.header-home {
     margin-bottom: 1.5rem;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;  /* Compensar el padding de las columnas */
+}
+
+/* Estilos de las tarjetas */
 .card-container {
-    width: 400px;
+    padding: 0.5rem;
+    width: 100%;  /* En móvil, 1 card por fila */
 }
 
 .card {
     border-radius: 20px;
     border: none;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgba(61, 10, 81, 0.834) 50%, rgba(45, 0, 96, 0.834) 100%);
+    height: 100%;
 }
 
 .card:hover {
@@ -219,6 +229,31 @@ main {
     transform: scale(1.05);
 }
 
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: var(--whitesmoke);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: var(--whitesmoke);
+    opacity: 0.9;
+    flex-grow: 1;
+}
+
+/* Botón de la galería */
 #custom-btn-gallery {
     border: none;
     background: var(--btn-gradient);
@@ -228,7 +263,15 @@ main {
     transition: all 0.4s ease;
     font-weight: 600;
     padding: 8px 16px;
+    width: 100%;
+    margin-top: 1rem;
 }
+
+#custom-btn-gallery:hover {
+    background: var(--btn-hover-gradient);
+    transform: scale(1.02);
+}
+
 
 
 /* Footer styles */
@@ -442,7 +485,15 @@ button.custom-btn:hover {
     /* card */
 
     .card-container {
-        width: 360px;
+        width: 50%;
+    }
+    
+    .container {
+        padding: 2rem;
+    }
+
+    .card-img-top {
+        height: 220px;
     }
 
     #product-9 {
@@ -513,8 +564,36 @@ button.custom-btn:hover {
         padding: 8px 32px;
     }
 
-    .card-container {
-        width: 380px;
+    @media (min-width: 992px) {
+        /* En desktop, 3 cards por fila */
+        .card-container {
+            width: 33.333%;
+        }
+    
+        .header-gallery {
+            margin-bottom: 2rem;
+        }
+    
+        .container {
+            padding: 2.5rem;
+        }
+        
+        .navbar-nav {
+            gap: 15px;
+            align-items: center;
+        }
+    
+        .nav-item {
+            border-bottom: none;
+        }
+    
+        .nav-link {
+            font-size: 1.1rem;
+        }
+    
+        .card-img-top {
+            height: 240px;
+        }
     }
 
     /* carousel */
