@@ -1,3 +1,19 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+ul li::before {
+  position: absolute;
+  left: 0;
+  color: #ff6600;
+  font-size: 1.5rem;
+}
+
 /* Global Styles */
 * {
   box-sizing: border-box;
@@ -416,11 +432,6 @@ button.custom-btn:hover {
   transition: all 0.4s ease;
 }
 
-/* Bootstrap JS styles */
-.error-message {
-  /* Add any specific styles for error messages */
-}
-
 /* Media Queries */
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* navbar */
@@ -665,7 +676,7 @@ button.custom-btn:hover {
     background: var(--btn-hover-gradient);
     color: #fff;
     box-shadow: 0 0 7px 0.23rem rgba(163, 94, 206, 0.166);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
   }
 }
 

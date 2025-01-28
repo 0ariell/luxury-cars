@@ -1,3 +1,7 @@
+@import '_variables';
+@import '_listas';
+@import 'mixin';
+
 /* Global Styles */
 * {
     box-sizing: border-box;
@@ -424,10 +428,6 @@ button.custom-btn:hover {
     transition: all 0.4s ease;
 }
 
-/* Bootstrap JS styles */
-.error-message {
-    /* Add any specific styles for error messages */
-}
 
 /* Media Queries */
 
@@ -734,6 +734,6 @@ button.custom-btn:hover {
         background: var(--btn-hover-gradient);
         color: #fff;
         box-shadow: 0 0 7px 0.23rem rgba(163, 94, 206, 0.166);
-        transition: all 0.4s ease;
+        transition: all 0.3s ease;
     }
 }
