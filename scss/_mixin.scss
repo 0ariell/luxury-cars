@@ -1,0 +1,24 @@
+// mixin.scss
+
+// Mixin para media queries
+@mixin media-query($tamaño) {
+    @if $tamaño =="md" {
+        @media (min-width: #{$breakpoint-md}) {
+            @content;
+        }
+    }
+
+    @else if $tamaño =="lg" {
+        @media (min-width: #{$breakpoint-lg}) {
+            @content;
+        }
+    }
+}
+
+// Mixin para centrar elementos
+@mixin centrar($altura: 100px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $altura;
+}

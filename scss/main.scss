@@ -468,11 +468,11 @@ button.custom-btn:hover {
 @media (min-width: 991.98px) {
 
     header.header-home {
-    margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
     header.header-about {
-    margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 
 
@@ -488,8 +488,8 @@ button.custom-btn:hover {
         gap: 3px;
         padding-top: 1rem;
         display: flex;
-        align-items: center; 
-        height: 100%;        
+        align-items: center;
+        height: 100%;
     }
 
     .nav-item {
@@ -533,7 +533,7 @@ button.custom-btn:hover {
         gap: 2rem;
         margin: 0 !important;
     }
-    
+
     .benefit-item {
         background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgba(61, 10, 81, 0.834) 50%, rgba(45, 0, 96, 0.834) 100%);
         border-radius: 10px;
@@ -541,14 +541,14 @@ button.custom-btn:hover {
         padding: 0 !important;
         margin: 0;
     }
-    
+
     .benefit-title {
         font-weight: 900;
         text-align: left;
         padding: 20px;
         margin: 0;
     }
-    
+
     .benefit-p {
         font-weight: 200;
         padding: 0 20px 20px 20px;
@@ -559,42 +559,42 @@ button.custom-btn:hover {
         color: white;
         background-image: url(../img/bg/bg-form.png);
     }
-    
+
     body,
     label,
     header,
     fieldset {
         color: var(--whitesmoke);
     }
-    
+
     .header-form {
         margin-bottom: 2rem;
     }
-    
+
     .navbar-form {
         margin-bottom: 2rem;
     }
-    
+
     #main-form.container-fluid {
         padding: 0 1.5rem 2.5rem 1.5rem;
     }
-    
+
     #title,
     #description {
         text-align: center;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
         font-weight: 400;
     }
-    
+
     #description {
         font-weight: lighter;
         font-style: italic;
     }
-    
+
     #title {
         letter-spacing: -1.5px;
     }
-    
+
     form {
         background: linear-gradient(to right, rgba(72, 23, 112, 0.315) 0%, rgba(123, 19, 142, 0.315) 100%);
         display: flex;
@@ -602,34 +602,34 @@ button.custom-btn:hover {
         border-radius: 25px;
         padding: 2rem;
     }
-    
+
     div.form-check {
         margin-top: 10px;
     }
-    
+
     .form-check-label {
         font-size: .85rem;
         margin: .276rem 10px 10px 10px;
         align-content: center;
     }
-    
+
     .form-check-input {
         width: auto;
     }
-    
+
     .form-control#name,
     #email,
     #number {
         font-size: .85rem;
     }
-    
+
     .form-control:focus#name:focus,
     #email:focus,
     #number:focus {
         box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
         border: none;
     }
-    
+
     input,
     select,
     textarea {
@@ -639,82 +639,82 @@ button.custom-btn:hover {
         border-radius: 5px;
         color: #000000e6;
     }
-    
+
     textarea:focus {
         box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
         border: none;
     }
-    
+
     input[type="checkbox"]:checked,
     input[type="radio"]:checked {
         background-color: #5210d5e9;
         border: none;
     }
-    
+
     input[type="checkbox"]:hover,
     input[type="radio"]:hover {
         background-color: #7a37ffe9;
         border: none;
     }
-    
+
     input[type="checkbox"]:focus,
     input[type="radio"]:focus {
         box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
         border: none;
     }
-    
+
     #dropdown {
         padding: 0.75rem;
         font-size: .85rem;
         color: #6c757d;
     }
-    
+
     #dropdown:focus {
         border: none;
         box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
     }
-    
+
     select option {
         color: #151515;
     }
-    
+
     label.label-enter {
         font-size: 0.95rem;
     }
-    
+
     label {
         font-weight: 550;
         margin-bottom: 0.5rem;
     }
-    
+
     .legend {
         font-size: 0.95rem;
         font-weight: 550;
     }
-    
+
     .form-group {
         margin-bottom: 1.5rem;
     }
-    
+
     fieldset {
         display: flex;
         flex-direction: column;
     }
-    
+
     .fieldsets {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .comment-area {
         margin-top: 1rem;
     }
-    
+
     #comments {
         margin-top: 0.25rem;
     }
-    
+
     button.custom-btn {
         border: none;
         margin-top: 1rem;
@@ -728,7 +728,7 @@ button.custom-btn:hover {
         transition: all 0.4s ease;
         font-weight: 600;
     }
-    
+
     button.custom-btn:hover {
         transform: scale(1.06);
         background: var(--btn-hover-gradient);
