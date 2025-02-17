@@ -1,9 +1,26 @@
+@charset "UTF-8";
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+ul li::before {
+  position: absolute;
+  left: 0;
+  color: #ff6600;
+  font-size: 1.5rem;
+}
+
 /* Global Styles */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 :root {
@@ -60,7 +77,7 @@ main {
 }
 
 .nav-link:hover {
-  color: #9a6de3c4 !important;
+  color: rgba(154, 109, 227, 0.768627451) !important;
 }
 
 .navbar-toggler {
@@ -91,7 +108,7 @@ main {
   border: none;
   background: var(--btn-gradient);
   color: #fff;
-  font-size: 1.10rem;
+  font-size: 1.1rem;
   border-radius: 10px;
   transition: all 0.4s ease;
   font-weight: 600;
@@ -108,7 +125,7 @@ main {
   margin-top: 10px;
   font-weight: 200;
   text-align: center;
-  padding: .5rem;
+  padding: 0.5rem;
   color: #fff;
 }
 
@@ -186,8 +203,6 @@ main {
 }
 
 /* About Us */
-
-
 #descriptionAboutUs {
   text-align: center;
   padding: 0 20px;
@@ -195,19 +210,28 @@ main {
 }
 
 /* gallery */
-
-.header-gallery {
+.header-home {
   margin-bottom: 1.5rem;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem; /* Compensar el padding de las columnas */
+}
+
+/* Estilos de las tarjetas */
 .card-container {
-  width: 400px;
+  padding: 0.5rem;
+  width: 100%; /* En móvil, 1 card por fila */
 }
 
 .card {
   border-radius: 20px;
   border: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgba(61, 10, 81, 0.834) 50%, rgba(45, 0, 96, 0.834) 100%);
+  height: 100%;
 }
 
 .card:hover {
@@ -215,6 +239,31 @@ main {
   transform: scale(1.05);
 }
 
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  color: var(--whitesmoke);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: var(--whitesmoke);
+  opacity: 0.9;
+  flex-grow: 1;
+}
+
+/* Botón de la galería */
 #custom-btn-gallery {
   border: none;
   background: var(--btn-gradient);
@@ -224,12 +273,16 @@ main {
   transition: all 0.4s ease;
   font-weight: 600;
   padding: 8px 16px;
+  width: 100%;
+  margin-top: 1rem;
 }
 
+#custom-btn-gallery:hover {
+  background: var(--btn-hover-gradient);
+  transform: scale(1.02);
+}
 
 /* Footer styles */
-
-
 div.custom-footer-bg {
   border-top: 1px solid;
   border-image: var(--btn-gradient) 1;
@@ -237,8 +290,6 @@ div.custom-footer-bg {
   background-position: center;
   background-image: url(../img/bg/bg-nav.png);
 }
-
-
 
 /* Form Styles */
 #body-form {
@@ -295,8 +346,8 @@ div.form-check {
 }
 
 .form-check-label {
-  font-size: .85rem;
-  margin: .276rem 10px 10px 10px;
+  font-size: 0.85rem;
+  margin: 0.276rem 10px 10px 10px;
   align-content: center;
 }
 
@@ -307,7 +358,7 @@ div.form-check {
 .form-control#name,
 #email,
 #number {
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .form-control:focus#name:focus,
@@ -324,7 +375,7 @@ textarea {
   padding: 0.55rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  color: #000000e6;
+  color: rgba(0, 0, 0, 0.9019607843);
 }
 
 textarea:focus {
@@ -332,27 +383,27 @@ textarea:focus {
   border: none;
 }
 
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-  background-color: #5210d5e9;
+input[type=checkbox]:checked,
+input[type=radio]:checked {
+  background-color: rgba(82, 16, 213, 0.9137254902);
   border: none;
 }
 
-input[type="checkbox"]:hover,
-input[type="radio"]:hover {
-  background-color: #7a37ffe9;
+input[type=checkbox]:hover,
+input[type=radio]:hover {
+  background-color: rgba(122, 55, 255, 0.9137254902);
   border: none;
 }
 
-input[type="checkbox"]:focus,
-input[type="radio"]:focus {
+input[type=checkbox]:focus,
+input[type=radio]:focus {
   box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
   border: none;
 }
 
 #dropdown {
   padding: 0.75rem;
-  font-size: .85rem;
+  font-size: 0.85rem;
   color: #6c757d;
 }
 
@@ -407,8 +458,8 @@ button.custom-btn {
   margin-top: 1rem;
   background: var(--btn-gradient);
   color: #fff;
-  font-size: 1.10rem;
-  padding: .60rem;
+  font-size: 1.1rem;
+  padding: 0.6rem;
   border-radius: 8px;
   justify-content: center;
   align-items: center;
@@ -424,312 +475,282 @@ button.custom-btn:hover {
   transition: all 0.4s ease;
 }
 
-
 /* Media Queries */
-
 @media (min-width: 768px) and (max-width: 991.98px) {
-
   /* navbar */
-
   .navbar.navbar-light {
-      border-bottom: 1px solid wheat;
+    border-bottom: 1px solid wheat;
   }
-
   /* card */
-
   .card-container {
-      width: 360px;
+    width: 50%;
   }
-
+  .container {
+    padding: 2rem;
+  }
+  .card-img-top {
+    height: 220px;
+  }
   #product-9 {
-      display: none;
+    display: none;
   }
-
   /* carousel */
-
   .carousel-inner .carousel-item img {
-      width: 95%;
-      height: 700px;
-      object-fit: cover;
+    width: 95%;
+    height: 700px;
+    object-fit: cover;
   }
-
   /* form */
-
   form {
-      max-width: 78%;
-      margin: 0 auto;
+    max-width: 78%;
+    margin: 0 auto;
   }
 }
-
 @media (min-width: 991.98px) {
-
   header.header-home {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-
   header.header-about {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-
-
-
   /* Navbar */
-
   .ul-nav {
-      padding: 0 !important;
-      gap: 15px !important;
+    padding: 0 !important;
+    gap: 15px !important;
   }
-
   .navbar-nav {
-      gap: 3px;
-      padding-top: 1rem;
-      display: flex;
-      align-items: center; 
-      height: 100%;        
+    gap: 3px;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
-
   .nav-item {
-      padding: 3px 0;
-      border-bottom: none;
+    padding: 3px 0;
+    border-bottom: none;
   }
-
   .nav-link {
-      font-size: 1.1rem !important;
+    font-size: 1.1rem !important;
   }
-
   #custom-btn-main {
-      margin: 0 !important;
-      border: none;
-      background: var(--btn-gradient);
-      color: #fff;
-      font-size: 1.10rem;
-      border-radius: 10px;
-      transition: all 0.4s ease;
-      font-weight: 600;
-      padding: 8px 32px;
+    margin: 0 !important;
+    border: none;
+    background: var(--btn-gradient);
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    font-weight: 600;
+    padding: 8px 32px;
   }
-
-  .card-container {
-      width: 380px;
-  }
-
   /* carousel */
-
-  .carousel-inner .carousel-item img {
-      width: 95%;
-      height: 400px;
-      object-fit: cover;
-  }
-
   /* benefit */
-
+}
+@media (min-width: 991.98px) and (min-width: 992px) {
+  /* En desktop, 3 cards por fila */
+  .card-container {
+    width: 33.333%;
+  }
+  .header-gallery {
+    margin-bottom: 2rem;
+  }
+  .container {
+    padding: 2.5rem;
+  }
+  .navbar-nav {
+    gap: 15px;
+    align-items: center;
+  }
+  .nav-item {
+    border-bottom: none;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+  }
+  .card-img-top {
+    height: 240px;
+  }
+}
+@media (min-width: 991.98px) {
+  .carousel-inner .carousel-item img {
+    width: 95%;
+    height: 400px;
+    object-fit: cover;
+  }
   .benefit-box {
-      align-content: center;
-      width: 100%;
-      gap: 2rem;
-      margin: 0 !important;
+    align-content: center;
+    width: 100%;
+    gap: 2rem;
+    margin: 0 !important;
   }
-  
   .benefit-item {
-      background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgba(61, 10, 81, 0.834) 50%, rgba(45, 0, 96, 0.834) 100%);
-      border-radius: 10px;
-      border: 1px solid rgb(140, 0, 255);
-      padding: 0 !important;
-      margin: 0;
+    background: linear-gradient(to right, rgba(37, 8, 60, 0.834) 0%, rgba(61, 10, 81, 0.834) 50%, rgba(45, 0, 96, 0.834) 100%);
+    border-radius: 10px;
+    border: 1px solid rgb(140, 0, 255);
+    padding: 0 !important;
+    margin: 0;
   }
-  
   .benefit-title {
-      font-weight: 900;
-      text-align: left;
-      padding: 20px;
-      margin: 0;
+    font-weight: 900;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
   }
-  
   .benefit-p {
-      font-weight: 200;
-      padding: 0 20px 20px 20px;
-      margin: 0;
+    font-weight: 200;
+    padding: 0 20px 20px 20px;
+    margin: 0;
   }
-
   #body-form {
-      color: white;
-      background-image: url(../img/bg/bg-form.png);
+    color: white;
+    background-image: url(../img/bg/bg-form.png);
   }
-  
   body,
   label,
   header,
   fieldset {
-      color: var(--whitesmoke);
+    color: var(--whitesmoke);
   }
-  
   .header-form {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
   }
-  
   .navbar-form {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
   }
-  
   #main-form.container-fluid {
-      padding: 0 1.5rem 2.5rem 1.5rem;
+    padding: 0 1.5rem 2.5rem 1.5rem;
   }
-  
   #title,
   #description {
-      text-align: center;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-      font-weight: 400;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    font-weight: 400;
   }
-  
   #description {
-      font-weight: lighter;
-      font-style: italic;
+    font-weight: lighter;
+    font-style: italic;
   }
-  
   #title {
-      letter-spacing: -1.5px;
+    letter-spacing: -1.5px;
   }
-  
   form {
-      background: linear-gradient(to right, rgba(72, 23, 112, 0.315) 0%, rgba(123, 19, 142, 0.315) 100%);
-      display: flex;
-      flex-direction: column;
-      border-radius: 25px;
-      padding: 2rem;
+    background: linear-gradient(to right, rgba(72, 23, 112, 0.315) 0%, rgba(123, 19, 142, 0.315) 100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 2rem;
   }
-  
   div.form-check {
-      margin-top: 10px;
+    margin-top: 10px;
   }
-  
   .form-check-label {
-      font-size: .85rem;
-      margin: .276rem 10px 10px 10px;
-      align-content: center;
+    font-size: 0.85rem;
+    margin: 0.276rem 10px 10px 10px;
+    align-content: center;
   }
-  
   .form-check-input {
-      width: auto;
+    width: auto;
   }
-  
   .form-control#name,
   #email,
   #number {
-      font-size: .85rem;
+    font-size: 0.85rem;
   }
-  
   .form-control:focus#name:focus,
   #email:focus,
   #number:focus {
-      box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
-      border: none;
+    box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
+    border: none;
   }
-  
   input,
   select,
   textarea {
-      width: 100%;
-      padding: 0.55rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      color: #000000e6;
+    width: 100%;
+    padding: 0.55rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.9019607843);
   }
-  
   textarea:focus {
-      box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
-      border: none;
+    box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
+    border: none;
   }
-  
-  input[type="checkbox"]:checked,
-  input[type="radio"]:checked {
-      background-color: #5210d5e9;
-      border: none;
+  input[type=checkbox]:checked,
+  input[type=radio]:checked {
+    background-color: rgba(82, 16, 213, 0.9137254902);
+    border: none;
   }
-  
-  input[type="checkbox"]:hover,
-  input[type="radio"]:hover {
-      background-color: #7a37ffe9;
-      border: none;
+  input[type=checkbox]:hover,
+  input[type=radio]:hover {
+    background-color: rgba(122, 55, 255, 0.9137254902);
+    border: none;
   }
-  
-  input[type="checkbox"]:focus,
-  input[type="radio"]:focus {
-      box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
-      border: none;
+  input[type=checkbox]:focus,
+  input[type=radio]:focus {
+    box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
+    border: none;
   }
-  
   #dropdown {
-      padding: 0.75rem;
-      font-size: .85rem;
-      color: #6c757d;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    color: #6c757d;
   }
-  
   #dropdown:focus {
-      border: none;
-      box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
+    border: none;
+    box-shadow: 0 0 7px 0.23rem rgba(178, 105, 223, 0.419);
   }
-  
   select option {
-      color: #151515;
+    color: #151515;
   }
-  
   label.label-enter {
-      font-size: 0.95rem;
+    font-size: 0.95rem;
   }
-  
   label {
-      font-weight: 550;
-      margin-bottom: 0.5rem;
+    font-weight: 550;
+    margin-bottom: 0.5rem;
   }
-  
   .legend {
-      font-size: 0.95rem;
-      font-weight: 550;
+    font-size: 0.95rem;
+    font-weight: 550;
   }
-  
   .form-group {
-      margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-  
   fieldset {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
-  
   .fieldsets {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
-  
   .comment-area {
-      margin-top: 1rem;
+    margin-top: 1rem;
   }
-  
   #comments {
-      margin-top: 0.25rem;
+    margin-top: 0.25rem;
   }
-  
   button.custom-btn {
-      border: none;
-      margin-top: 1rem;
-      background: var(--btn-gradient);
-      color: #fff;
-      font-size: 1.10rem;
-      padding: .60rem;
-      border-radius: 8px;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.4s ease;
-      font-weight: 600;
+    border: none;
+    margin-top: 1rem;
+    background: var(--btn-gradient);
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    font-weight: 600;
   }
-  
   button.custom-btn:hover {
-      transform: scale(1.06);
-      background: var(--btn-hover-gradient);
-      color: #fff;
-      box-shadow: 0 0 7px 0.23rem rgba(163, 94, 206, 0.166);
-      transition: all 0.4s ease;
+    transform: scale(1.06);
+    background: var(--btn-hover-gradient);
+    color: #fff;
+    box-shadow: 0 0 7px 0.23rem rgba(163, 94, 206, 0.166);
+    transition: all 0.3s ease;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
